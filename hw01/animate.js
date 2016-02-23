@@ -1,8 +1,11 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var cbutton = document.getElementById("circle");
-ctx.fillStyle = "#ff0000";
+var sbutton = document.getElementById("stop");
 var grow = true;
+
+var frameid;
+ctx.fillStyle = "#ff0000";
 
 var drawC = function(){
     console.log("drawn");
@@ -29,6 +32,10 @@ var drawC = function(){
 	window.requestAnimationFrame(animCode);
     }
     animCode();
+}
+
+var stopIt = function(){
+    windowCancelAnimation();
 }
 
 cbutton.addEventListener("click", drawC);
