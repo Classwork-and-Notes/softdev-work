@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<head>
+  
+</head>
+<body>
+  <canvas height="400" width="400" id="myCanvas" style="border:1px solid #000000;"></canvas>
+  <button id="circle">circle</button>
+    <button id="rect">rect</button>
+  <button id="stop">stop</button>  
+  <script type="text/javascript" src="animate.js"></script>
+</body>
