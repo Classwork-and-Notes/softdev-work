@@ -41,7 +41,7 @@ var drawC = function(){
 }
 
 var stopIt = function(){
-    window.CancelAnimationFrame(frameid);
+    window.cancelAnimationFrame(frameid);
 }
 
 var drawR = function(){
@@ -49,19 +49,25 @@ var drawR = function(){
     var y = 0;
     var right = true;
     var down = true;
-    
+  
     var animCode = function(){
-	ctx.clearRect(0, 0, c.width, c.height);
-	y++;
-	x++;
-	ctx.drawImage(img, x, y, 200, 100);
+	ctx.clearRect(0, 0, c.width, c.height);	
+	ctx.drawImage(img, x, y, 150, 75);
 
-	if (x == c.width)
-	    
-
-
-
+	if (right)
+	    x++;
+	else
+	    x--;
+	if (down)
+	    y++;
+	else
+	    y--;
 	
+	if (x == c.width - 150 ||  x == 0)
+	    right = !right;
+	if (y == c.height - 75 || y == 0)
+	    down = !down;
+
 	frameid = window.requestAnimationFrame(animCode);
     }
     animCode();
