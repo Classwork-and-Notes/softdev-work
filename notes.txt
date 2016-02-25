@@ -1,5 +1,12 @@
-svg is a specific xml based vector graphics format
+SVG
 
+format:
 <svg xmlns="http://...">    
      SVG CODE HERE
 </svg>		
+
+use svg tags
+
+Canvas
+
+c = getElementById("")
