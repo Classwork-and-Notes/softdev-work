@@ -1,0 +1,5 @@
+svg is a specific xml based vector graphics format
+
+<svg xmlns="http://...">    
+     SVG CODE HERE
+</svg>		
