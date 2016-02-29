@@ -5,8 +5,29 @@ format:
      SVG CODE HERE
 </svg>		
 
-use svg tags
+svg uses tags
+
+getElementByTagName("");
+c1.setAttribute();
+
+-creating SVG elements in javascript:
+createElementNS(<NAMESPACE IDENTIFIER>, <ELEMENT>);
+
+-add element to SVG container:
+var pic = document.getElementById("svgid");
+pic.appendChild();
+
+remove element:
+pic.removeChild( c1 );
+c1.remove()l;
+
+setInterval(<FUNCTION>, TIME);
 
 Canvas
 
-c = getElementById("")
+c = document.getElementById("myCanvas");
+ctx = c.getContext("2d");
+ctx.fill();
+ctx.beginPath();
+ctx.stroke();
+ctx.arc(x, y, r, startAngle, endAngle);
