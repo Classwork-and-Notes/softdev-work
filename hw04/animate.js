@@ -3,6 +3,7 @@ g = document.getElementById("go");
 s = document.getElementById("stop");
 var intervalID;
 var grow = false;
+var maxR = parseInt(pic.getAttribute("width"))/2
 
 var drawC = function(){
 
@@ -26,10 +27,10 @@ var animate = function(){
 	else
 	    c.setAttribute("r",--r);
 
-	if (r == 0 || r == pic.width)
+	if (r == 0 || r == maxR)
 	    grow = !grow;
     }
-    intervalID = setInterval(grow, 500);   
+    intervalID = setInterval(grow, 100);   
 }
 
 var clear = function(){
