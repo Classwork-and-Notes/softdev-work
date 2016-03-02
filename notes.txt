@@ -6,8 +6,9 @@ format:
 </svg>		
 
 svg uses tags
+works the same way as HTML tags
 
-getElementByTagName("");
+document.getElementByTagName();
 c1.setAttribute();
 
 -creating SVG elements in javascript:
@@ -17,11 +18,14 @@ createElementNS(<NAMESPACE IDENTIFIER>, <ELEMENT>);
 var pic = document.getElementById("svgid");
 pic.appendChild();
 
-remove element:
+-remove element:
 pic.removeChild( c1 );
-c1.remove()l;
+c1.remove();
+
+*c1 refers to an element
 
 setInterval(<FUNCTION>, TIME);
+
 
 Canvas
 
