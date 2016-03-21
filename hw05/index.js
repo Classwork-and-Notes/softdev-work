@@ -9,7 +9,7 @@ window.addEventListener('load', function(){
 	.text(function(d,i){return states[i]})
 	.style("background-color", function(d,i){
 	    if (i >= 29){
-		return "#ff0000";
+		return "#0000cc";
 	    }
 	}
 );
