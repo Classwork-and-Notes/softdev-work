@@ -1,0 +1,8 @@
+#graph div {
+    height: 36px;
+    margin: 2px;
+    border: 1px solid black;
+    vertical-align: baseline;
+    background-color: #aeaeae;
+    font-size:12px
+}
