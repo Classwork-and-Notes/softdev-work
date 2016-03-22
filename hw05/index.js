@@ -8,21 +8,20 @@ var scale = d3.scale.linear()
     .domain([0,d3.max(Ddelegates)])
     .range([0,420])
 
-var D = true;
-
 var loadD = function(){
-	d3.select("#key")
-	.style("background-color","#0000cc")
+    d3.select("#key")
+	.style("background-color","blue")
     d3.select("#graph").selectAll("div")
 	.data(Ddelegates)
 	.enter().append("div")
+    d3.select("#graph").selectAll("div")
 	.transition()
 	.duration(2000)
-	.style("width", function(d){return d * 10 + "px"})
+	.style("width", function(d){return scale(d) + "px"})
 	.text(function(d,i){return Dstates[i] +": "+ Ddelegates[i]})
 	.style("background-color", function(d,i){
 	    if (i >= 29){
-			return "#0000cc";
+		return "blue";
 	    }
 	    else{
 	    	return "#aeaeae";
@@ -32,17 +31,17 @@ var loadD = function(){
 }
     
 var loadR = function() {
-	d3.select("#key")
-	.style("background-color","#ff0000")
+    d3.select("#key")
+	.style("background-color","red")
     d3.select("#graph").selectAll("div")
 	.data(Rdelegates)
 	.transition()
 	.duration(2000)
-	.style("width", function(d){return d * 10 + "px"})
+	.style("width", function(d){return scale(d) + "px"})
 	.text(function(d,i){return Rstates[i] +": "+ Rdelegates[i]})
 	.style("background-color", function(d,i){
 	    if (i >= 29){
-			return "#ff0000";
+			return "red";
 	    }
 	    else{
 	    	return "#aeaeae";
