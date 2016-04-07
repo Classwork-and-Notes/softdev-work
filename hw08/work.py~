@@ -1,0 +1,30 @@
+def union(a,b):
+    for x in a:
+        if x not in b:
+            b.append(x)
+    return b
+
+def intersection(a,b):
+    result = []
+    for x in a:
+        if x in b:
+          result.append(x)
+    return result
+
+def setDiff(a,b):
+    result = []
+    for x in a:
+        if x not in b:
+            result.append(x)
+    return result
+
+def symDiff(a,b):
+    sefDiff(a,b)
+
+a = [1,2,3,4,5]
+b = [2,3,4,6]
+
+print union(a,b)
+print "should be 2,3,4"
+print intersection(a,b)
+print setDiff(a,b)
